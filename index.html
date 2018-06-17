@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Page Description">
+    <title>CLUB ATL - Find the Hottest Nightclubs in Atlanta</title>
+
+    <!-- Bootstrap -->
+    <link href="js/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+<div class="container-fluid height-fix">
+
+    <div class="row height-fix">
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 height-fix hidden-xs hidden-sm no-padding" id="list-nightclub">
+
+            <div class="filter-wrapper">
+                <input type="text" id="filter" placeholder="" data-bind="textInput: query"
+                       autocomplete="off" class="form-control">
+            </div>
+
+            <div class="list-wrapper">
+                <ul class="nightclub-list list-unstyled" data-bind="foreach: getLocations">
+                    <li data-bind="click: $parent.selectNightclub">
+                        <h1 data-bind="text: name"></h1>
+                        <p>
+                            <!--<span data-bind="text: categories[0].name"></span>-->
+                            <span data-bind="text: location.formattedAddress[0]"></span> -
+                            <span data-bind="text: location.formattedAddress[1]"></span> -
+
+
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 height-fix no-padding map-wrapper">
+
+            <!-- mobile menu-->
+            <button id="btn-mobile-menu" type="button" class="visible-xs visible-sm">
+                <i class="glyphicons glyphicons-star-empty"></i>
+            </button>
+            <!-- //mobile menu-->
+
+            <!--logo-->
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <!--//logo-->
+
+            <!--map-->
+            <div id="map"></div>
+            <!--//map-->
+
+            <!--powered by-->
+            <div class="poweredby">
+                <img src="img/powered_foursquare.png" alt="">
+            </div>
+            <!--//powered poweredbyby-->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/libs/knockout/dist/knockout.js"></script>
+<script src="js/app.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/styles.js"></script>
+
+<!-- Google Maps -->
+<script async src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAL6X-Q8vIbYTB3KVPFwyyj3xtTECf7p6M&callback=initMap" onerror="googleError()"></script>
+
+</body>
+</html>

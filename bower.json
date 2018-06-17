@@ -1,0 +1,22 @@
+{
+  "name": "ufsn-neighborhood",
+  "homepage": "https://github.com/diegopettengill/ufsn-neighborhood",
+  "authors": [
+    "diegopettengill"
+  ],
+  "description": "Project for Udacity Full Stack Nanodegree",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "knockout": "^3.4.2"
+  }
+}

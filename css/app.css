@@ -1,0 +1,199 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.height-fix {
+    height: 100%;
+}
+
+#map {
+    height: 100%;
+}
+
+.logo{
+    top:10px;
+    right:10px;
+    position: absolute;
+    z-index:90;
+}
+.logo img{
+    width: 90px;
+}
+
+.poweredby{
+    position: absolute;
+    z-index:90;
+    bottom: 0;
+    left:70px;
+}
+
+.poweredby img{
+    width: 170px;
+}
+
+.filter-wrapper {
+    border: solid 1px #00FE00;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.filter-wrapper input[type="text"] {
+    border: none;
+    color: #00FE00;
+    padding-left: 52px;
+    background-image: url(https://e.thumbs.redditmedia.com/GGpZfaOMpIABIhcF.png);
+    background-repeat: no-repeat;
+    background-position: 5px 3px;
+}
+
+#filter {
+    background-color: #002F00;
+}
+
+.nightclub-list li {
+    border-bottom: 1px solid #E120F0;
+    padding: 10px 20px;
+    background: #000000;
+}
+
+.nightclub-list li:hover, .nightclub-list li.active {
+    cursor: pointer;
+    background: #d600ff;
+}
+
+.nightclub-list li h1 {
+    margin-bottom: 3px;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #00FE00;
+}
+
+.nightclub-list li p {
+    color: cyan;
+    font-size: 13px;
+}
+
+.list-wrapper {
+    height: calc(100% - 55px);
+    overflow-y: scroll;
+}
+
+#btn-mobile-menu{
+    position: absolute;
+    top: 10px;
+    left:10px;
+    z-index:99;
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    border:none;
+    box-shadow:0 0 5px rgba(0,0,0,0.3);
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    font-size:20px;
+}
+
+/** RESPONSIVE **/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+    .filter-wrapper{
+        background: transparent;
+        box-shadow:none;
+    }
+
+    .filter-wrapper input{
+        height: 50px;
+        margin-top: -10px;
+        padding-left: 62px;
+    }
+
+    .map-wrapper {
+        position: relative;
+    }
+
+    #list-nightclub{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        z-index:99;
+        padding: 10px;
+    }
+
+    .list-wrapper{
+        background: #fff;
+    }
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+    /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
+}
+
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width: 1224px) {
+    /* Styles */
+}
